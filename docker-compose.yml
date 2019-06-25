@@ -1,0 +1,17 @@
+version: '2'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    command: bash -c "/bin/bash"
+    volumes:
+      - .:/app
+    ports:
+      - 3000:3000
+    tty: true
+    stdin_open: true
+
+volumes:
+  bundle:
+    driver: local
