@@ -1,15 +1,14 @@
 .PHONY: all init up up-d down exec ruby-book bash docker docker-rm
 
 # CONST
-WEBPACK=vue
 D=docker
 DC=${D}-compose
 
 # VARIABLE
 a=
 
+###########################################################################################################
 all: ruby-book
-
 
 build:
 	${DC} build
